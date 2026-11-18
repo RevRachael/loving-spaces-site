@@ -37,23 +37,28 @@
 
 <section id="form" style="background: #e3f5d9; padding: 72px 33px 88px; display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 48px">
 <div style="flex: 1 1 420px; min-width: 0; max-width: 560px; display: flex; flex-direction: column; gap: 22px">
-<h2 style="margin: 0; font-family: 'Dancing Script', cursive; font-weight: 500; font-size: 48px; line-height: 1.2; color: #4f7d34; font-size: 53px"><a href="mailto:LVlovingspaces@gmail.com?subject=Message%20from%20a%20website%20visitor" style="color: #4f7d34; text-decoration: none">Drop us a line!</a></h2>
-<div style="max-width: 560px; width: 100%; display: flex; flex-direction: column; gap: 18px">
+<h2 style="margin: 0; font-family: 'Dancing Script', cursive; font-weight: 500; font-size: 48px; line-height: 1.2; color: #4f7d34; font-size: 53px">Drop us a line!</h2>
+<form action="https://formsubmit.co/LVlovingspaces@gmail.com" method="POST" style="max-width: 560px; width: 100%; display: flex; flex-direction: column; gap: 18px">
+<input type="hidden" name="_subject" value="New message from the Loving Spaces website">
+<input type="hidden" name="_captcha" value="false">
+<input type="hidden" name="_template" value="table">
+<input type="hidden" name="_next" value="https://loving-spaces-site.pages.dev/thanks.html">
+<input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
 <div style="display: flex; flex-direction: column; gap: 6px">
 <label for="f-name" style="font-size: 22px; font-weight: 700; color: #1f2a1b">Name</label>
-<input id="f-name" type="text" style="width: 100%; box-sizing: border-box; padding: 12px 14px; font-family: inherit; font-size: 24px; color: #333a30; background: #ffffff; border: 1px solid #6f8f5a; border-radius: 6px; min-height: 44px">
+<input id="f-name" name="name" type="text" style="width: 100%; box-sizing: border-box; padding: 12px 14px; font-family: inherit; font-size: 24px; color: #333a30; background: #ffffff; border: 1px solid #6f8f5a; border-radius: 6px; min-height: 44px">
 </div>
 <div style="display: flex; flex-direction: column; gap: 6px">
 <label for="f-email" style="font-size: 22px; font-weight: 700; color: #1f2a1b">Email (required)</label>
-<input id="f-email" type="email" style="width: 100%; box-sizing: border-box; padding: 12px 14px; font-family: inherit; font-size: 24px; color: #333a30; background: #ffffff; border: 1px solid #6f8f5a; border-radius: 6px; min-height: 44px">
+<input id="f-email" name="email" type="email" required style="width: 100%; box-sizing: border-box; padding: 12px 14px; font-family: inherit; font-size: 24px; color: #333a30; background: #ffffff; border: 1px solid #6f8f5a; border-radius: 6px; min-height: 44px">
 </div>
 <div style="display: flex; flex-direction: column; gap: 6px">
 <label for="f-msg" style="font-size: 22px; font-weight: 700; color: #1f2a1b">Message</label>
-<textarea id="f-msg" rows="6" style="width: 100%; box-sizing: border-box; padding: 12px 14px; font-family: inherit; font-size: 24px; color: #333a30; background: #ffffff; border: 1px solid #6f8f5a; border-radius: 6px; min-height: 44px; resize: vertical"></textarea>
+<textarea id="f-msg" name="message" required rows="6" style="width: 100%; box-sizing: border-box; padding: 12px 14px; font-family: inherit; font-size: 24px; color: #333a30; background: #ffffff; border: 1px solid #6f8f5a; border-radius: 6px; min-height: 44px; resize: vertical"></textarea>
 </div>
-<a id="send" href="mailto:LVlovingspaces@gmail.com" style="align-self: flex-start; display: inline-block; padding: 14px 40px; background: #b9e19a; color: #1f2a1b; text-decoration: none; text-transform: uppercase; letter-spacing: 0.18em; font-size: 20px; font-weight: 700; border-radius: 999px">Send</a>
-<p style="margin: 0; font-size: 20px; color: #4a5445">Pressing Send opens your email with your message ready to send to Loving Spaces.</p>
-</div>
+<button type="submit" style="align-self: flex-start; display: inline-block; padding: 14px 40px; background: #b9e19a; color: #1f2a1b; text-decoration: none; text-transform: uppercase; letter-spacing: 0.18em; font-size: 20px; font-weight: 700; border-radius: 999px; border: 0; cursor: pointer; font-family: inherit">Send</button>
+<p style="margin: 0; font-size: 20px; color: #4a5445">Your message goes straight to Loving Spaces. You can also email <a href="mailto:LVlovingspaces@gmail.com">LVlovingspaces@gmail.com</a> or call <a href="tel:7252772486">(725) 277-2486</a>.</p>
+</form>
 </div>
 </section>
 
@@ -61,10 +66,5 @@
 
 </div>
 
-<script>
-(function(){var n=document.getElementById('f-name'),e=document.getElementById('f-email'),m=document.getElementById('f-msg'),a=document.getElementById('send');
-function u(){var s='Message from '+(n.value||'a website visitor');var body='Name: '+n.value+'\nEmail: '+e.value+'\n\n'+m.value;a.href='mailto:LVlovingspaces@gmail.com?subject='+encodeURIComponent(s)+'&body='+encodeURIComponent(body);}
-[n,e,m].forEach(function(x){x.addEventListener('input',u)});u();})();
-</script>
 </body>
 </html>
