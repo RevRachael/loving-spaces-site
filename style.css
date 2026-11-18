@@ -1,0 +1,9 @@
+body{margin:0}
+a{color:#4f7d34}a:hover{color:#365a22}
+details.faq{background:#f4fbef;border:1px solid #cfe8bd;border-radius:10px;overflow:hidden}
+details.faq summary{list-style:none;cursor:pointer;display:flex;align-items:center;justify-content:space-between;gap:16px;padding:18px 22px;font-size:29px;font-weight:700;line-height:1.4;color:#1f2a1b;min-height:44px}
+details.faq summary::-webkit-details-marker{display:none}
+details.faq svg{flex:none;transition:transform .2s}
+details.faq[open] svg{transform:rotate(180deg)}
+details.faq .ans{padding:0 22px 20px;color:#333a30}
+img{max-width:100%}
